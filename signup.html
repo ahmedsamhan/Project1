@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/main.css" />
+	<title>فرعون</title>
+</head>
+
+<body dir="rtl">
+	<header class="nav">
+		<div class="container">
+			<nav class="navbar">
+				<img src="img/people.png" alt="logo" />
+				<ul>
+					<a href="index.html">
+						<li>الرئيسية</li>
+					</a>
+					<a href="login.html">
+						<li>تسجيل الدخول</li>
+					</a>
+					<a href="signup.html">
+						<li>تسجيل</li>
+					</a>
+					<a href="about.html">
+						<li>عنا</li>
+					</a>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="wrap">
+		<div id="error"></div>
+		تسجيل
+		<form id="form" action="profile.html" method="GET">
+			<input type="text" id="name" placeholder="الاسم" />
+			<input type="text" id="username" placeholder="اسم المستخدم" required />
+			<input type="email" id="email" placeholder="البريد الالكتروني" required />
+			<input type="password" id="password" placeholder="كلمة المرور" required />
+			<!-- <input type="password" id="re-password" placeholder="اعادة كلمة المرور" /> -->
+			<button type="submit" class="login" />إنشاء حساب</form>
+		</form>
+	</div>
+	<script defer src="./js/main.js"></script>
+</body>
+
+</html>
