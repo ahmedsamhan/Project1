@@ -6,6 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="css/main.css" />
 	<title>فرعون</title>
+	<script>
+		function getInfo() {
+			var uname = document.getElementById('name').value
+			alert("Welcome" + " " + uname + "")
+		}
+	</script>
 </head>
 
 <body dir="rtl">
@@ -23,9 +29,6 @@
 					<a href="signup.html">
 						<li>تسجيل</li>
 					</a>
-					<a href="about.html">
-						<li>عنا</li>
-					</a>
 				</ul>
 			</nav>
 		</div>
@@ -33,16 +36,25 @@
 	<div class="wrap">
 		<div id="error"></div>
 		تسجيل
-		<form id="form" action="profile.html" method="GET">
-			<input type="text" id="name" placeholder="الاسم" />
+		<form id="form" action="index.html" onsubmit="getInfo()">
+			<input type="text" id="name" placeholder="الاسم الاول" />
+			<input type="text" id="name" placeholder="الاسم الاخير" />
 			<input type="text" id="username" placeholder="اسم المستخدم" required />
+			<input type="tel" id="phone" placeholder="الهاتف المحمول" pattern="[0][1][0-9]{9}" required />
+			<p style="opacity:0.6;font-size:12px"> يجب ان يكون : 01012345678</p>
+			<label class="gender-l">النوع</label>
+			<input class="gender" type="radio" id="male" name="gender" value="male"><label
+				style="font-size:30px;padding: 10px;">ذكر</label>
+			<input class="gender" type="radio" id="female" name="gender" value="female"><label
+				style="font-size:30px;padding: 10px;">انثي</label>
 			<input type="email" id="email" placeholder="البريد الالكتروني" required />
-			<input type="password" id="password" placeholder="كلمة المرور" required />
-			<!-- <input type="password" id="re-password" placeholder="اعادة كلمة المرور" /> -->
-			<button type="submit" class="login" />إنشاء حساب</form>
+			<input type="password" pattern="[A-Z]{1}[a-z0-9]{7}" id="password" placeholder="كلمة المرور" required />
+			<p style="opacity:0.6;font-size:12px;"> يجب ان يكون تبدا بحرف كابيتال وتكون مكونة من 8 احرف وارقام</p>
+			<button type="submit" class="login" />إنشاء حساب
+		</form>
 		</form>
 	</div>
-	<script defer src="./js/main.js"></script>
+	<script defer src="./js/all.min.js"></script>
 </body>
 
 </html>

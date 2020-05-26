@@ -5,6 +5,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/main.css" />
 		<title>فرعون</title>
+		<script>
+			function getInfo() {
+				var uname = document.getElementById('user').value
+				alert("Welcome" + " Back " + uname)
+			}
+		</script>
 	</head>
 
 	<body dir="rtl">
@@ -22,24 +28,36 @@
 						<a href="signup.html">
 							<li>تسجيل</li>
 						</a>
-						<a href="about.html">
-							<li>عنا</li>
-						</a>
+
 					</ul>
 				</nav>
 			</div>
 		</header>
 		<div class="wrap">
+			<div id="error"></div>
 			تسجيل الدخول
-			<form action="profile.html" method="GET">
-				<input type="text" id="username" placeholder="اسم المستخدم" />
+			<form
+				onsubmit="getInfo()"
+				id="form"
+				action="index.html"
+			>
 				<input
+					required
+					type="text"
+					id="user"
+					placeholder="اسم المستخدم"
+				/>
+				<input
+					required
 					type="password"
+					pattern="[A-Z]{1}[a-z0-9]{7}"
 					id="password"
 					placeholder="كلمة المرور"
 				/>
-				<button type="submet" class="login"> تـسجيل الدخول </button>
-				<button type="button" class="forgot"> نسيت كلمة المرور </button>
+				<button type="submit" class="login">
+					تـسجيل الدخول
+				</button>
+				<button type="button" class="forgot">نسيت كلمة المرور</button>
 			</form>
 		</div>
 		<script src="js/main.js"></script>
