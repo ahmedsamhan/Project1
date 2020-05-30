@@ -48,7 +48,7 @@
 			<input class="gender" type="radio" id="female" name="gender" value="female"><label
 				style="font-size:30px;padding: 10px;">انثي</label>
 			<input type="email" id="email" placeholder="البريد الالكتروني" required />
-			<input type="password" pattern="[A-Z]{1}[a-z0-9]{7}" id="password" placeholder="كلمة المرور" required />
+			<input type="password" pattern="^[A-Z]{1}[\w\S]{7}$" id="password" placeholder="كلمة المرور" required />
 			<p style="opacity:0.6;font-size:12px;"> يجب ان يكون تبدا بحرف كابيتال وتكون مكونة من 8 احرف وارقام</p>
 			<button type="submit" class="login" />إنشاء حساب
 		</form>
